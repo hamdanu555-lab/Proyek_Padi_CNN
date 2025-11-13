@@ -1,0 +1,4 @@
+Nama File	Label	Confidence	Waktu
+capture_1.jpg	Tidak Sehat	90.66%	2025-11-13 10:32:23
+capture_2.jpg	Sehat	73.99%	2025-11-13 10:33:08
+capture_3.jpg	Tidak Sehat	94.59%	2025-11-13 10:33:27
