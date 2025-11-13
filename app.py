@@ -7,7 +7,6 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-import cv2
 import tempfile
 
 # === Load Model ===
@@ -26,11 +25,11 @@ st.write("Upload gambar daun padi untuk mendeteksi apakah **Sehat** atau **Tidak
 uploaded_file = st.file_uploader("Pilih gambar daun padi...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Simpan file sementara
+    # Simpan file sementara di server Streamlit
     tfile = tempfile.NamedTemporaryFile(delete=False)
-    tfile.write(uploaded_file.read(C\Proyek_Padi_CNN\20231006_163740.jpg))
+    tfile.write(uploaded_file.read())
 
-    # Tampilkan gambar
+    # Baca gambar yang diunggah
     image = Image.open(uploaded_file)
     st.image(image, caption="Gambar yang diunggah", use_column_width=True)
 
